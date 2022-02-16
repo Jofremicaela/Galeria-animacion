@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: white;
+}
+
+
+/*----------------------------contenedor grid----------*/
+
+.contenedor-general{
+  width: 100%;
+  max-width: 1370px;
+  height: 100%;
+  max-height: 1000px;
+  background: 
+      radial-gradient(black 3px, transparent 4px),
+      radial-gradient(black 3px, transparent 4px),
+      linear-gradient(#fff 4px, transparent 0),
+      linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+      linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #fff;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+}
+
+header, main{
+  grid-column: 2/6;
+  width:100%;
+}
+
+
+header{
+  background: rgb(247, 243, 243);
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row wrap;
+  align-items: center;
+  padding: 50px;
+}
+
+
+/* header nav */
+
+
+header nav {
+  font-size: xx-large;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgb(247, 243, 243);
+}
+nav ul {
+  background: rgb(247, 243, 243);
+  width: 100%;
+  height: 100%;
+ 
+}
+nav ul li {
+  display: inline-block;
+  background: rgb(247, 243, 243);
+  padding: 5px;
+}
+nav ul li a {
+  background:rgb(247, 243, 243);
+  color: rgb(90, 207, 236);
+  list-style: none;
+  text-decoration: none;
+  margin: 15px;
+}
+
+header nav ul a:hover{
+  color: green;
+  transition: 1s;
+}
+
+/*-------------------- elementos de main --------------*/
+
+
+main{
+  background: rgb(247, 243, 243);
+  padding: 10px;
+ 
+
+}
+
+main .fila1, .fila2{
+  width: 100%;
+  height: 45%;
+  background: rgb(247, 243, 243);
+  /* border: solid 1px rgb(3, 26, 9); */
+  margin-top: 10px;
+display: flex;
+flex-flow: row wrap;
+justify-content:space-around;
+align-content:center;
+overflow: hidden;
+}
+
+main .fila1 div, .fila2 div{
+width:160px;
+height: 160px;
+background: rgb(247, 243, 243);
+box-shadow: 3px 5px 4px rgb(73, 72, 72);
+}
+
+main .fila1 div img, .fila2 div img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+} 
+
+/* main img zoomout */
+
+.zoomout{
+  transition: 2s ease;
+}
+.zoomout:hover{
+  transform: scale(1.5);
+}
+.fila1 div{
+  overflow: hidden;
+}
+
+/* img efecto opacity */
+
+.opacity{
+  transition: 2s ease;
+}
+.opacity:hover{
+  opacity: 0.7;
+  
+}
+
+
+
+/* animacion de elementos en main */
+
+
+ .fila1 div{
+  animation: cortina1 1.5s ease-out;
+  
+}
+@keyframes cortina1{
+  from{
+    transform: translateX(-150vw);
+
+  }to{
+    transform: translateX(0);
+  }
+}
+
+/* animaciones en fila 2 */
+
+.fila2 div{
+  animation: cortina2 2s ease-out;
+  
+}
+@keyframes cortina2{
+  from{
+    transform: translateX(150vw);
+
+  }to{
+    transform: translateX(0);
+  }
+} 
+
+
+/* footer */
+
+footer{
+ background: rgb(247, 243, 243);
+}
+footer{
+  background: rgb(247, 243, 243);
+  padding: 20px;
+  grid-column: 1/8;
+  width: 100%;
+  text-align: center;
+  
+}
+footer ul {
+  width: 100%;
+  height: 40%;
+  list-style: none;
+  text-decoration: none;
+  background: rgb(247, 243, 243);
+  padding: 30px;
+  margin: auto; 
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 5px;
+  padding: 1px;
+  background: rgb(247, 243, 243);
+}
+footer ul li p {
+  background: rgb(247, 243, 243);
+  height: 50%;
+  border-left: 1px solid white;
+}
+
+
+
+
